@@ -420,6 +420,72 @@ footer {
   box-shadow: 0 18px 50px rgba(2, 6, 23, 0.6);
 }
 
+/* ACCORDION — EBOOK */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+  height: 100%;
+}
+
+.accordion-item {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(5, 32, 95, 0.06)
+  );
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(2, 6, 23, 0.6);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.accordion-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  padding: 16px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.accordion-header:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.accordion-icon {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--accent);
+  transition: transform 0.35s ease;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  transition: max-height 0.45s ease, padding 0.35s ease;
+}
+
+.accordion-item.active .accordion-body {
+  max-height: 100%;
+  padding: 0 18px 18px;
+}
+
 /* Responsividade melhorada para o Hero */
 @media (max-width: 1200px) {
   .card-visual {
@@ -523,4 +589,97 @@ footer {
 
 .rounded {
   border-radius: var(--radius) !important;
+}
+
+/* ================================
+   MOBILE — TEXTO CENTRALIZADO
+   ================================ */
+@media (max-width: 768px) {
+  /* Centralização global */
+  body {
+    text-align: center;
+  }
+
+  /* Containers de texto */
+  .hero-copy,
+  .about-text,
+  #professor .col-lg-7,
+  .cta-copy {
+    text-align: center;
+  }
+
+  /* Títulos */
+  h1 {
+    font-size: 30px !important;
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  /* Parágrafos */
+  p,
+  .muted,
+  .muted-2 {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .hero p.lead {
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Kicker */
+  .kicker {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+  }
+
+  /* Accordion */
+  .accordion-button {
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .accordion-body {
+    text-align: center;
+  }
+
+  .accordion-body ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .accordion-body li {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  /* CTA */
+  .cta-action {
+    justify-content: center;
+  }
+
+  .big-cta {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Countdown */
+  .countdown {
+    justify-content: center;
+  }
+
+  /* Professor imagem espaçamento */
+  .prof-card {
+    margin-bottom: 24px;
+  }
 }
