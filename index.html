@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
@@ -99,16 +99,8 @@
       <!-- SOBRE O CURSO -->
       <section class="wrapper reveal" id="about">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 about-img">
-              <img
-                src="./img/evolution.jpg"
-                alt="Evolução do aluno"
-                class="img-fluid rounded"
-              />
-            </div>
-
-            <div class="col-lg-6 about-text">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 text-center">
               <br />
               <h3>SOBRE O NOSSO CURSO</h3>
 
@@ -125,15 +117,14 @@
               </p>
 
               <!-- ACCORDION -->
-              <div class="accordion mt-4" id="accordionCurso">
+              <div class="accordion mt-4 text-center" id="accordionCurso">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button
-                      class="accordion-button collapsed"
+                      class="accordion-button collapsed text-center"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#conteudoCurso"
-                      aria-expanded="false"
                     >
                       📘 O que você vai aprender
                     </button>
@@ -144,26 +135,20 @@
                     class="accordion-collapse collapse"
                     data-bs-parent="#accordionCurso"
                   >
-                    <div class="accordion-body">
+                    <div class="accordion-body text-center">
                       <p class="muted">
                         O curso inclui um <strong>e-book completo</strong>, com
-                        mais de <strong>70 páginas</strong>, indo do básico à
-                        prática profissional.
+                        mais de <strong>70 páginas</strong>.
                       </p>
 
-                      <ul class="muted-2">
+                      <ul class="muted-2 list-unstyled">
                         <li>📘 E-book dividido em 6 partes</li>
                         <li>📝 Questionários para cada módulo</li>
-                        <li>
-                          🎥 Vídeo aulas explicando detalhadamente cada parte do
-                          e-book
-                        </li>
-                        <li>✍️ Tatuagem sendo feita passo a passo</li>
-                        <li>👥 Grupo VIP exclusivo para dúvidas</li>
-                        <li>📜 Certificado de conclusão</li>
-                        <li>
-                          📡 Lives semanais com correções e novas técnicas
-                        </li>
+                        <li>🎥 Vídeo aulas detalhadas</li>
+                        <li>✍️ Tatuagem passo a passo</li>
+                        <li>👥 Grupo VIP exclusivo</li>
+                        <li>📜 Certificado</li>
+                        <li>📡 Lives semanais</li>
                       </ul>
                     </div>
                   </div>
@@ -178,32 +163,46 @@
       <!-- PROFESSOR -->
       <section class="wrapper reveal" id="professor">
         <div class="container">
-          <div class="row align-items-center">
-            <!-- TEXTO -->
-            <div class="col-lg-7 order-2 order-lg-1">
+          <div class="row justify-content-center text-center">
+            <div class="col-12 col-lg-8">
               <br />
               <h3>Quem é Hércules Silva?</h3>
+
+              <!-- IMAGEM DO PROFESSOR -->
+              <div class="row justify-content-center my-4">
+                <div class="col-10 col-md-6 col-lg-4">
+                  <img
+                    src="./img/hercules-professor.png"
+                    alt="Hércules Silva"
+                    class="img-fluid rounded mx-auto d-block"
+                  />
+                </div>
+              </div>
+
               <p class="muted">
                 Hércules Silva é tatuador há mais de 8 anos e construiu sua
                 carreira vivendo da arte. Criador de um método exclusivo que
                 conduz qualquer iniciante do zero até a primeira tatuagem
-                profissional com técnica e segurança.
+                profissional.
               </p>
+
+              <!-- IMAGEM EVOLUÇÃO -->
+              <div class="row justify-content-center my-4">
+                <div class="col-12 col-md-8 col-lg-6">
+                  <img
+                    src="./img/evolution.jpg"
+                    alt="Evolução do aluno"
+                    class="img-fluid rounded"
+                  />
+                </div>
+              </div>
+
               <p class="muted-2">
                 <em>
                   "Comecei sem saber absolutamente nada. Hoje, vivo da arte e
                   ajudo outras pessoas a conquistarem o mesmo caminho."
                 </em>
               </p>
-            </div>
-
-            <!-- IMAGEM -->
-            <div class="col-lg-5 prof-card order-1 order-lg-2">
-              <img
-                src="./img/hercules-professor.png"
-                alt="Hércules Silva"
-                class="img-fluid rounded"
-              />
             </div>
           </div>
         </div>
@@ -240,7 +239,7 @@
                 </div>
               </div>
 
-              <!-- COUNTDOWN -->
+              <!-- COUNTDOWN 
               <div class="countdown" id="promo-countdown">
                 <div class="unit">
                   <div class="num" id="cd-days">00</div>
@@ -262,6 +261,7 @@
               <p class="muted-2 countdown-note">
                 **contagem para fim da promoção.
               </p>
+              -->
             </div>
           </div>
         </div>
@@ -277,7 +277,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/app.js"></script>
 
-    <!-- Countdown -->
+    <!-- Countdown 
     <script>
       const video = document.querySelector(".video-auto");
 
@@ -291,12 +291,12 @@
             }
           });
         },
-        { threshold: 0.6 }
+        { threshold: 0.6 },
       );
 
       observer.observe(video);
     </script>
-
+    -->
     <!-- Accordion -->
     <script>
       document.querySelectorAll(".accordion-header").forEach((header) => {
