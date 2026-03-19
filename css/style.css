@@ -301,6 +301,31 @@ section.wrapper {
   object-fit: contain; 
 }
 
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.video-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .cta-copy h3 {
   margin-top: 0;
   font-size: 22px;
