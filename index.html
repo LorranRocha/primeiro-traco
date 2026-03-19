@@ -217,7 +217,10 @@
                 <video
                   src="./video/apresentacao.mp4"
                   autoplay
+                  muted
+                  loop
                   playsinline
+                  preload="auto"
                   class="video-auto"
                 ></video>
               </div>
@@ -281,20 +284,42 @@
     <script>
       const video = document.querySelector(".video-auto");
 
+      const playVideo = () => {
+        if (!video) return;
+      
+        const playPromise = video.play();
+      
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // fallback silencioso
+          });
+        }
+      };
+      
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              video.play();
+              if (video.readyState >= 2) {
+                playVideo();
+              } else {
+                video.addEventListener("canplay", playVideo, { once: true });
+              }
             } else {
               video.pause();
             }
           });
         },
-        { threshold: 0.6 },
+        { threshold: 0.5 }
       );
-
+      
       observer.observe(video);
+
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) {
+          video.play().catch(() => {});
+        }
+      });
     </script>
     -->
     <!-- Accordion -->
