@@ -213,7 +213,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 reveal-fade" data-delay="80">
-              <div class="video-box">
+              <div class="video-box" id="videoBox">
                 <video
                   src="./video/apresentacao.mp4"
                   autoplay
@@ -223,6 +223,10 @@
                   preload="auto"
                   class="video-auto"
                 ></video>
+              
+                <div class="video-overlay" id="videoOverlay">
+                  🔊 Toque para ativar o som
+                </div>
               </div>
             </div>
 
@@ -322,6 +326,18 @@
       });
 
       const box = document.getElementById("videoBox");
+
+
+      const videoBox = document.getElementById("videoBox");
+      const overlay = document.getElementById("videoOverlay");
+      const videoEl = document.querySelector(".video-auto");
+      
+      videoBox.addEventListener("click", () => {
+        videoEl.muted = false;
+        videoEl.play().catch(() => {});
+      
+        overlay.classList.add("hidden");
+      });
     </script>
     <!-- Accordion -->
     <script>
